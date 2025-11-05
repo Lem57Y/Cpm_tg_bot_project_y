@@ -1,7 +1,6 @@
 import telebot
 from telebot.types import Message
 from config import API_TOKEN
-API_TOKEN = '8225226157:AAGzbrjXBOZFfZnWYJtpzfgMXF15qMt0BWI'
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -17,7 +16,7 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def echo_message(message: Message):
     text = message.text
-    word_count = ('Number of words: ') + str(text.count(" ") + 1)
+    word_count = ('Number of words: ') + str(len(text.split()))
     sumbol_count = ('Number of sumbols: ') + str(len(text))
     new_text = word_count + ('\n') + sumbol_count
     bot.reply_to(message, new_text)
