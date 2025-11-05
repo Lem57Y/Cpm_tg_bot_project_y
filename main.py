@@ -1,6 +1,6 @@
 import telebot
 from telebot.types import Message
-
+from config import API_TOKEN
 API_TOKEN = '8225226157:AAGzbrjXBOZFfZnWYJtpzfgMXF15qMt0BWI'
 
 bot = telebot.TeleBot(API_TOKEN)
@@ -21,6 +21,5 @@ def echo_message(message: Message):
     sumbol_count = ('Number of sumbols: ') + str(len(text))
     new_text = word_count + ('\n') + sumbol_count
     bot.reply_to(message, new_text)
-
 
 bot.infinity_polling()
