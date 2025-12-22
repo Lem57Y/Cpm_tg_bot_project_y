@@ -1,0 +1,19 @@
+ if text == "Прямо":
+    bot.send_message(
+        message.from_user.id,
+        'Вы вышли из комнаты в перёд',
+    )
+                room = 4
+
+elif text == "Направо" or text == "Налево" or text == "Назад":
+    bot.send_message(
+    message.from_user.id,
+    'Нет прохода',
+                )
+    room = 4
+                
+else:
+    bot.send_message(
+    message.from_user.id,
+    "Вы нажали не то",
+    )
