@@ -42,7 +42,7 @@ def send_welcome(message):
     global storage
     global keyboard
     iD = message.from_user.id
-    first_text = ("Hello") + (' ') + message.from_user.first_name + (' ') + ('@') + message.from_user.username
+    first_text = text1
 
 
     bot.send_message(
