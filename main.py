@@ -1,7 +1,7 @@
 import telebot
 from telebot.types import Message, ReplyKeyboardMarkup, KeyboardButton
 from config import API_TOKEN
-from text import text1, text2, text3, text4, text5, text6, text7, text8, text9, text0
+from text import text1, text2, text3, text4, text5, text6, text7, text8, text9, text0, finaltext
 
 keyboard = ReplyKeyboardMarkup(row_width=2, resize_keyboard=False)
 buttonN = KeyboardButton(text = "на север")
@@ -279,7 +279,7 @@ def echo_message(message: Message):
         if text == 'открутить гайки':
             bot.send_message(
                 message.from_user.id,
-                'объект откреплён',
+                finaltext,
             )
             storage[iD]['unlock'] = 1
 
