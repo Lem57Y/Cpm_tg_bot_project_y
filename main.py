@@ -31,13 +31,9 @@ storage['des'][9]= text9
 bot = telebot.TeleBot(API_TOKEN)
 
 
+
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
-
-
-
-
-
 def send_welcome(message):
     global storage
     global keyboard
@@ -50,7 +46,7 @@ def send_welcome(message):
         first_text,
         reply_markup=keyboard
     )
-    storage[iD] = {"room": 1, 'key': 1, 'code': 0, 'wrench': 0, 'unlock': 0, 'rooms': {0: 0, 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}}
+    storage[iD] = {"room": 1, 'key': 0, 'code': 0, 'wrench': 0, 'unlock': 0, 'rooms': {0: 0, 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}}
     
     
     
